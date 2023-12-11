@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <audio src="./w.mp3" id="w"></audio>
+    <button id="bt1">播放mp3</button>
+    <button id="speak">文字转语音</button>
+    <script>
+
+    document.getElementById('bt1').onclick = function(){
+      document.getElementById('w').play()
+    } 
+
+  var button = document.getElementById('speak');
+  button.addEventListener('click', function() {
+    var speech = new SpeechSynthesisUtterance('<彖>曰：大哉乾元，万物资始，乃统天。云行雨施，品物流形。大明终始，六位时成。时乘六龙以御天。乾道变化，各正性命。保合大和，乃利贞。首出庶物，万国威宁。    ');
+    window.speechSynthesis.speak(speech);
+  });
+
+    </script>
+</body>
+</html>
